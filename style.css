@@ -1,0 +1,134 @@
+/* Solynshko - Elegant Sunshine Theme */
+
+:root {
+  --bg-light: #FFF8EC;
+  --sun-brown: #E1B382;
+  --deep-brown: #8C5E3C;
+  --hero-gradient: linear-gradient(to right, #FFE0B2, #FFD180);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 248, 236, 0.95); /* soft beige */
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background-color: var(--sun-brown);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--deep-brown);
+  transition: color 0.3s;
+}
+
+header.scrolled .logo {
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--deep-brown);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header.scrolled .nav-links a {
+  color: white;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: var(--hero-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--deep-brown);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #4d4d4d;
+}
+
+.btn {
+  padding: 12px 30px;
+  background-color: var(--sun-brown);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--deep-brown);
+}
+
+/* Sections */
+section {
+  padding: 100px 40px;
+  text-align: center;
+}
+
+section h2 {
+  color: var(--deep-brown);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+}
